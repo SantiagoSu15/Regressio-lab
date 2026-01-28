@@ -116,6 +116,7 @@ Its vector of partial derivatives that indicates the direction and rate of great
 
 The negative gradient is used to minimize the cost function.
 
+---
 
 ### Gradient Descent
 Optimization algorithm to find the parameters that minimize the cost function
@@ -125,7 +126,7 @@ w := w - \alpha \frac{\partial J}{\partial w}, \qquad
 b := b - \alpha \frac{\partial J}{\partial b}
 $$
 
-
+---
 
 ### Vectorization
 
@@ -137,7 +138,12 @@ $$
 \hat{L} = wM+b
 $$
 
+
+---
+
+
 # Datasets
+
 
 ### Part 1
 
