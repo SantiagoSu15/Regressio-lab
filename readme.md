@@ -42,9 +42,7 @@ jupyter notebook
 
 
 
-## Running the tests
-
-This project does not include automated tests, but the notebooks contain validations and visualizations that allow verifying the correct operation of the models:
+---
 
 ### Model validation
 
@@ -54,7 +52,116 @@ The notebooks include:
 - Analysis of different learning rates
 - Cost surface visualization
 
+### AWS SageMaker
 
+#### Process
+- Create AWS Sagemaker Studio
+- Create a new Notebook enviroment
+- Upload both jupyter notebooks
+- Select respective kernel and run all cells
+
+#### Evidence 
+
+Sagemaker domain
+![imagen](/public/prueba4.png)
+
+Select a profile and go to studio
+![imagen](/public/prueba5.png)
+
+Rund and open the code builer space
+![imagen](/public/prueba6.png)
+
+Open or create the folder where the notebooks will be 
+![imagen](/public/prueba7.png)
+
+![imagen](/public/prueba8.png)
+
+Select Kernel
+![imagen](/public/prueba9.png)
+
+Run all cells
+![imagen](/public/prueba1.png)
+![imagen](/public/prueba2.png)
+![imagen](/public/prueba3.png)
+
+
+Note: No differences were observed between local and cloud execution 
+
+
+# Key Concepts
+
+### Cost Function
+
+Used to determine how badly a model is predicting.
+
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+$$
+
+
+Where:
+  - $y$ = Value
+  - $\hat{y}$ = Predicted value
+  -  $n$ = Number of data
+---
+### Cost Surface 
+
+Shows how good or bad the model is for each possible combination of parameters.
+
+---
+
+### Gradient
+
+Its vector of partial derivatives that indicates the direction and rate of greatest increase of a function
+
+The negative gradient is used to minimize the cost function.
+
+
+### Gradient Descent
+Optimization algorithm to find the parameters that minimize the cost function
+
+$$
+w := w - \alpha \frac{\partial J}{\partial w}, \qquad
+b := b - \alpha \frac{\partial J}{\partial b}
+$$
+
+
+
+### Vectorization
+
+Replace explicit loops with vector operations to make calculations faster and more efficient.
+
+### Stellar luminosity as a function
+
+$$
+\hat{L} = wM+b
+$$
+
+# Datasets
+
+### Part 1
+
+```
+M = [0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4]
+L = [0.15, 0.35, 1.00, 2.30, 4.10, 7.00, 11.2, 17.5, 25.0, 35.0]
+```
+
+Where
+ - **M**: Stellar mass
+ - **L**: Luminosity  
+
+### Part 2
+
+```
+M = [0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4]
+T = [3800, 4400, 5800, 6400, 6900, 7400, 7900, 8300, 8800, 9200]
+L = [0.15, 0.35, 1.00, 2.30, 4.10, 7.00, 11.2, 17.5, 25.0, 35.0]
+```
+
+Where
+ - **M**: Stellar mass
+ - **L**: Luminosity 
+ - **T**: Temperature 
 
 
 
